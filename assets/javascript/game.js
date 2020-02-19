@@ -7,4 +7,7 @@ var usedLetters = [];
 var randoLetters = randoLetters;
 //Variables//
 
+//Choosing rando letter//
+randoLetters = letters[Math.floor(Math.random() * letters.length)];
+console.log(randoLetters)
 
