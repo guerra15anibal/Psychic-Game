@@ -1,8 +1,8 @@
 //Variables//
-var letters = ["abcdefghijklmnopqrstuvwz"]
+var letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","z"]
 var wins = 0;
 var losses = 0;
-var chances = 9;
+var chances = 10;
 var usedLetters = [];
 var randoLetters = randoLetters;
 //Variables//
@@ -24,13 +24,13 @@ document.onkeyup = function (press) {
     var userGuess = event.key
 //.On elements//
 
-//Winning if//
+//Winning//
 if(userGuess === randoLetters){
     wins++
-    chances = 9;
+    chances = 10;
     usedLetters =[];
 }
-//Winning if//
+//Winning//
 
 //Using 1 chance every letter pressed//
 Rando();
@@ -38,6 +38,29 @@ if (userGuess !== randoLetters){
     chances--;
 }
 //Using 1 chance every letter pressed//
+
+//Losing//
+if(chances ==0){
+    losses++
+    usedLetters= []
+    chances = 10;
+}
+//Losing//
+
+//Assighs variables to IDs//
+if (usedLetters.indexOf(userGuess) >= 0) {
+
+} else {
+      usedLetters.push(userGuess);
+      document.getElementById("Letters Guessed").innerHTML = usedLetters;
+      console.log(usedLetters);
+}
+
+document.getElementById("Wins").innerHTML = wins;
+document.getElementById("Losses").innerHTML = losses;
+document.getElementById("Guesses Remaining").innerHTML = chances;
+//Assighs variables to IDs//
+
 
 
 
