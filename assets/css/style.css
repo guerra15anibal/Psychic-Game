@@ -1,0 +1,14 @@
+body {
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+}
+
+.game-Box {
+  padding-top: 30px;
+  padding-left: 300px;
+}
