@@ -3,27 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Psychic Game</title>
+    <title>Letter Guessing Game</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <script
       src="assets/javascript/game.js"
       rel="stylesheet"
       type="text/javascript"
     ></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   </head>
 
   <body>
-    <h1>Guess the letter and win... Nothing!</h1>
+
+    <div class="banner jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Guess the same letter the computer is thinking of... Good luck!</h1>
+      </div>
+    </div>
 
     <div class="game-Box">
       <h2>Wins:</h2>
-      <div id="Wins"></div>
+      <div id="Wins">0</div>
       <h2>Losses:</h2>
-      <div id="Losses"></div>
+      <div id="Losses">0</div>
       <h2>Guesses Remaining:</h2>
-      <div id="Guesses Remaining"></div>
+      <div id="guessesRemaining">10</div>
       <h2>Letters Guessed:</h2>
-      <div id="Letters Guessed"></div>
+      <div id="lettersGuessed">0</div>
     </div>
+
   </body>
+  
 </html>

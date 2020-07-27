@@ -12,3 +12,12 @@ h1 {
   padding-top: 30px;
   padding-left: 300px;
 }
+
+#Wins, #Losses, #guessesRemaining , #lettersGuessed{
+  font-size: 30px;
+}
+
+.banner{
+  background-image: url(../images/jumbo.jpg);
+  color: white;
+}

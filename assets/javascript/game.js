@@ -4,40 +4,34 @@ var wins = 0;
 var losses = 0;
 var chances = 10;
 var usedLetters = [];
-var randoLetters = randoLetters;
-//Variables//
+var randomLetters = randomLetters;
 
 //Choosing rando letter//
-randoLetters = letters[Math.floor(Math.random() * letters.length)];
-console.log(randoLetters)
-//Choosing rando letter//
+randomLetters = letters[Math.floor(Math.random() * letters.length)];
+console.log(randomLetters)
 
 //Making rando letter a function//
 function Rando() {
-    randoLetters = letters[Math.floor(Math.random() * letters.length)];
-    console.log(randoLetters)
+    randomLetters = letters[Math.floor(Math.random() * letters.length)];
+    console.log(randomLetters)
 }
-//Making rando letter a function//
 
 //.On elements//
 document.onkeyup = function (press) {
     var userGuess = event.key
-    //.On elements//
 
     //Winning//
-    if (userGuess === randoLetters) {
+    if (userGuess === randomLetters) {
         wins++
         chances = 10;
         usedLetters = [];
     }
-    //Winning//
 
     //Using 1 chance every letter pressed//
     Rando();
-    if (userGuess !== randoLetters) {
+    if (userGuess !== randomLetters) {
         chances--;
     }
-    //Using 1 chance every letter pressed//
 
     //Losing//
     if (chances == 0) {
@@ -45,21 +39,19 @@ document.onkeyup = function (press) {
         usedLetters = []
         chances = 10;
     }
-    //Losing//
 
-    //Assighs variables to IDs//
+    //Assigns variables to IDs//
     if (usedLetters.indexOf(userGuess) >= 0) {
 
     } else {
         usedLetters.push(userGuess);
-        document.getElementById("Letters Guessed").innerHTML = usedLetters;
+        document.getElementById("lettersGuessed").innerHTML = usedLetters;
         console.log(usedLetters);
     }
 
     document.getElementById("Wins").innerHTML = wins;
     document.getElementById("Losses").innerHTML = losses;
-    document.getElementById("Guesses Remaining").innerHTML = chances;
-    //Assighs variables to IDs//
+    document.getElementById("guessesRemaining").innerHTML = chances;
 
 
 
